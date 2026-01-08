@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/hide Div using js</title>
+    <script>
+        function hands(){
+            let ele=document.getElementById("box");
+            if(ele.style.display==="none")
+        {
+            ele.style.display="block";
+            document.getElementById("Show_hide_btn").innerText="hide the box";
+        }
+        else
+        {
+            ele.style.display="none";
+            document.getElementById("Show_hide_btn").innerText="show the box";
+        }
+    }
+    function cursur(){
+         document.getElementById("box").style.backgroundColor="green";
+           
+    function curcurout(){
+        document.getElementById("box").style.backgroundColor="red";
+    }     
+    }
+
+    </script>
+    <style>
+        #box{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" onmouseover="cursur()" onmouseout="curcurout()">
+
+    </div>
+    <button id="Show_hide_btn" onclick="hands()">Hide the button</button>
+</body>
+</html>
