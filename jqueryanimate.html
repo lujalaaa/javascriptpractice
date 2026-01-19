@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate with jquery</title>
+    <style>
+        *{
+            background-color: darkcyan;
+        }
+        #block{
+            background-color: antiquewhite;
+            width: 45px;
+            border:1px solid green;
+        }
+        button{
+            font-size: .7cm;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button id="go">Run</button> -->
+    <div id="block">hello</div>
+    <script src="jquery.js"></script>
+    <script>
+        // jquery animate
+        // .animate (properties [,duration] [,easing] [,complete])
+        // .animate( properties,options)
+        $("#block").mouseover(function(){
+            $("#block")
+            .animate({ width:"60%"},999)
+            .animate({fontSize : "40px"},999)
+            .animate({borderLeftWidth :"15px", width:"+=50" },999)
+        });
+    </script>
+</body>
+</html>

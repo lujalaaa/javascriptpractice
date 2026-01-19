@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Basic</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            // alert("jquery works");
+            $("#btn").click(function(){
+                $("#box").toggle(1200);
+            });
+         });
+        $(function(){
+            $("#box").hover(function(){
+                $("#box").css('background-color','#aaa');
+                console.log("you entered");
+                
+            },
+                function(){
+                    $("#box").css('background-color',"brown");
+                    console.log("you left. ");
+                });
+        })
+       $(document).ready(function(){
+        $("input").on({
+            "click": function(){ $("label").css("bottom","20px");}, 
+            // "mouseleave": function(){ $("label").css("bottom","5px");}
+       })
+       });
+       
+
+    </script>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+        }
+        input{
+            border-width: 0px 0px 2px 0px;
+            border-color: rgb(0, 0, 0);
+            outline:none;
+            /* position:relative; */
+        }
+        label{
+            position: absolute;
+            bottom: 2px;
+        }
+        .name{
+            position:relative;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <button id="btn">Click</button><br><br><br>
+    <div class="name">
+        <label for="name" >name</label><br>
+        <input type="text"> 
+    </div>
+    
+</body>
+</html>

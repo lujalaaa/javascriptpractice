@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class and object in javascript</title>
+</head>
+<body>
+    <script>
+        // var person = {
+        //     full_name : "Lujala Manandhar",
+        //     address : "Kathmanu",
+        //     phone : 9813822949,
+        //     displayDetail : function(){
+        //         return this.full_name + " " + this.address +" " +  this.phone;
+        //     },
+        //     setDetail : function (fname,phone,add){
+        //         this.full_name = fname;
+        //         this.phone = phone;
+        //         this.address = add;
+        //    }
+        // }
+        // person.setDetail("skr",9892834,"kalanki");
+        // document.writeln(person.displayDetail());
+        class person{
+            constructor(name){
+                this.name=name;
+            }
+            getName(){
+                return this.name;
+            } 
+        }
+        let Person= new person("john");
+        document.writeln(Person.getName());
+
+        var now=new Date();
+        document.writeln(now);
+
+        var PIval=Math.PI;
+        document.writeln(PIval);
+
+        var str=Math.PI.toString();
+        var PI=str.substr(0,4);
+        document.writeln(PI);
+
+        var str1=new String("this is line one");
+        var index= str1.indexOf(" ");
+        document.writeln(str1);
+        document.writeln(index);
+    </script>
+</body>
+</html>
